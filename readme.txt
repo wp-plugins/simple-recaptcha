@@ -1,30 +1,29 @@
 === Simple reCAPTCHA ===
 Contributors: cdillon27
+Donate link: http://www.wpmission.com/donate/
 Tags: captcha, recaptcha, google captcha, reCAPTCHA, text captcha, spam, antispam
 Requires at least: 3.0
 Tested up to: 3.9.1
-Stable tag: 0.1
+Stable tag: trunk
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Use Google's reCAPTCHA with any custom form.
+Use Google's reCAPTCHA on any custom form.
 
 == Description ==
 
 What this plugin does:
 
-* Adds Google's reCAPTCHA to any custom form.
+* Add reCAPTCHA to any custom form.
 
 What this plugin does NOT do:
 
-* Adds reCAPTCHA to standard WordPress forms like logins or comments. For that, try [Google Captcha](https://wordpress.org/plugins/google-captcha/) by BestWebSoft.
-
-The purpose of this plugin is to provide reCAPTCHA for other plugins or themes.
+* Add reCAPTCHA to standard WordPress forms like logins or comments. For that, try [Google Captcha](https://wordpress.org/plugins/google-captcha/) by BestWebSoft.
 
 = Purpose =
 
-1. To provide a single module for use by multiple plugins and themes.
-1. To store a site's reCAPTCHA keys in one place.
+1. To provide a single module for use by other plugins and themes.
+1. To store a site's reCAPTCHA keys in one place, independent of any other plugin or theme.
 1. To encourage other plugin developers to decouple and modularize.
 
 = How To Use =
@@ -71,7 +70,7 @@ if ( function_exists( 'wpmsrc_check' ) ) {
 
 * Display and validate the reCAPTCHA with a few lines of code.
 * Four themes by Google (Red, White, BlackGlass, and Clean).
-* Multi-site compatible.
+* Multisite compatible.
 
 = Plans =
 
@@ -89,11 +88,11 @@ Can you help? [Contact me](http://www.wpmission.com/contact/).
 
 1. Upload the `simple-recaptcha` folder to the `/wp-content/plugins/` directory.
 2. Activate the plugin via the `Plugins` menu in WordPress.
-3. Plugin settings are located in `Settings > Simple reCAPTCHA`.
+3. Go to `Settings > Simple reCAPTCHA`.
 
 == Frequently Asked Questions ==
 
-= How to get Google reCAPTCHA keys? =
+= How do I get Google reCAPTCHA keys? =
 
 [Sign up and manage your keys here](https://www.google.com/recaptcha/admin). You can also find this link on the Settings page.
 
