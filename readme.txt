@@ -22,8 +22,8 @@ What this plugin does NOT do:
 
 = Purpose =
 
-1. To provide a single module for use by other plugins and themes.
-1. To store a site's reCAPTCHA keys in one place, independent of any other plugin or theme.
+1. To provide a single lightweight module for use by other plugins and themes.
+1. To store the reCAPTCHA keys in one place, whether single site or multisite, independent of any other plugin or theme.
 1. To encourage other plugin developers to decouple and modularize.
 
 = How To Use =
@@ -92,6 +92,10 @@ Can you help? [Contact me](http://www.wpmission.com/contact/).
 
 == Frequently Asked Questions ==
 
+= Is this multisite compatible? =
+
+Yes, be sure to Network Activate. Super admins can manage the authentication keys and set the default theme, as well as any subsite's theme. Each subsite admin can change their theme.
+
 = How do I get Google reCAPTCHA keys? =
 
 [Sign up and manage your keys here](https://www.google.com/recaptcha/admin). You can also find this link on the Settings page.
@@ -108,5 +112,13 @@ I am working on this.
 
 == Changelog ==
 
+= 0.2 =
+* Fixed multisite compatibility.
+
 = 0.1 =
 * Initial release.
+
+== Upgrade Notice ==
+
+= 0.2 =
+Definitely upgrade for multisite installations.
