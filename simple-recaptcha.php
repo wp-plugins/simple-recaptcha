@@ -156,7 +156,8 @@ add_action( 'admin_enqueue_scripts', 'wpmsrc_add_style' );
 function wpmsrc_register_ms_settings() {
 
 	// -1- DEFAULTS
-	$plugin_version = get_plugin_data( __FILE__, false )['Version'];
+	$plugin_data = get_plugin_data( __FILE__, false );
+	$plugin_version = $plugin_data['Version'];
 	// for a plugin upgrade, add new options here
 	$default_ms_options = array(
 			'public_key'     => '',
@@ -215,7 +216,8 @@ function wpmsrc_register_ms_settings() {
 function wpmsrc_register_settings() {
 
 	// -1- DEFAULTS
-	$plugin_version = get_plugin_data( __FILE__, false )['Version'];
+	$plugin_data = get_plugin_data( __FILE__, false );
+	$plugin_version = $plugin_data['Version'];
 	// add plugin-upgrade options here
 	$default_options = array(
 			'public_key'     => '',

@@ -12,13 +12,9 @@ Use Google's reCAPTCHA on any custom form.
 
 == Description ==
 
-What this plugin does:
+What this plugin does: Add reCAPTCHA to any custom form.
 
-* Add reCAPTCHA to any custom form.
-
-What this plugin does NOT do:
-
-* Add reCAPTCHA to standard WordPress forms like logins or comments. For that, try [Google Captcha](https://wordpress.org/plugins/google-captcha/) by BestWebSoft.
+What this plugin does NOT do: Add reCAPTCHA to standard WordPress forms like logins or comments. For that, try [Google Captcha](https://wordpress.org/plugins/google-captcha/) by BestWebSoft.
 
 = Purpose =
 
@@ -72,7 +68,7 @@ if ( function_exists( 'wpmsrc_check' ) ) {
 * Four themes by Google (Red, White, BlackGlass, and Clean).
 * Multisite compatible.
 
-= Plans =
+= Development =
 
 This plugin is under active development and all ideas and feedback are welcome.
 
@@ -112,6 +108,9 @@ I am working on this.
 
 == Changelog ==
 
+= 0.3 =
+* Improved compatibility with earlier versions of PHP.
+
 = 0.2 =
 * Fixed multisite compatibility.
 
@@ -119,6 +118,9 @@ I am working on this.
 * Initial release.
 
 == Upgrade Notice ==
+
+= 0.3 =
+Improved compatibility with earlier versions of PHP.
 
 = 0.2 =
 Definitely upgrade for multisite installations.
