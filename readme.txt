@@ -12,9 +12,13 @@ Use Google's reCAPTCHA on any custom form.
 
 == Description ==
 
-What this plugin does: Add reCAPTCHA to any custom form.
+= What this plugin does =
 
-What this plugin does NOT do: Add reCAPTCHA to standard WordPress forms like logins or comments. For that, try [Google Captcha](https://wordpress.org/plugins/google-captcha/) by BestWebSoft.
+Add reCAPTCHA to any custom form.
+
+= What this plugin does NOT do =
+
+Add reCAPTCHA to standard WordPress forms like logins or comments. For that, try [Google Captcha](https://wordpress.org/plugins/google-captcha/) by BestWebSoft.
 
 = Purpose =
 
@@ -24,7 +28,7 @@ What this plugin does NOT do: Add reCAPTCHA to standard WordPress forms like log
 
 = How To Use =
 
-Step 1. Enter your reCAPTCHA keys in Settings > Simple reCAPTCHA.
+Step 1. Enter your reCAPTCHA keys in `Settings > Simple reCAPTCHA`.
 
 Step 2. Add the reCAPTCHA box to your form:
 `
@@ -102,11 +106,14 @@ Go to the Settings page and select a theme. Don't forget to `Save Changes`.
 
 To customize it, select the Clean theme and style up from there.
 
-= How to use the other language files with reCAPTCHA? = 
+= How to use other language files with reCAPTCHA? = 
 
 I am working on this.
 
 == Changelog ==
+
+= 0.4 =
+* Fix bug in display function.
 
 = 0.3 =
 * Improved compatibility with earlier versions of PHP.
@@ -118,6 +125,9 @@ I am working on this.
 * Initial release.
 
 == Upgrade Notice ==
+
+= 0.4 =
+Fixed a bug in the display function.
 
 = 0.3 =
 Improved compatibility with earlier versions of PHP.

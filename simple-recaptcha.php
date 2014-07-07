@@ -1,35 +1,33 @@
 <?php
-/*
-	Plugin Name: Simple reCAPTCHA
-	Plugin URI: http://www.wpmission.com/
-	Description: A simple implementation of Google's reCAPTCHA suitable for any custom form.
-	Author: Chris Dillon
-	Version: 0.2
-	Author URI: http://www.wpmission.com/
-	Text Domain: wpmsrc
-	Requires: 3.0 or higher
-	License: GPLv3 or later
+/**
+ * Plugin Name: Simple reCAPTCHA
+ * Plugin URI: http://www.wpmission.com/
+ * Description: A simple implementation of Google's reCAPTCHA suitable for any custom form.
+ * Author: Chris Dillon
+ * Version: 0.4
+ * Author URI: http://www.wpmission.com/
+ * Text Domain: wpmsrc
+ * Requires: 3.0 or higher
+ * License: GPLv3 or later
+ *
+ * Copyright 2014  Chris Dillon  chris@wpmission.com
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License, version 3, as 
+ * published by the Free Software Foundation.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+ */
 
-	Copyright 2014  Chris Dillon  chris@wpmission.com
 
-	This program is free software; you can redistribute it and/or modify
-	it under the terms of the GNU General Public License, version 2, as 
-	published by the Free Software Foundation.
-
-	This program is distributed in the hope that it will be useful,
-	but WITHOUT ANY WARRANTY; without even the implied warranty of
-	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-	GNU General Public License for more details.
-
-	You should have received a copy of the GNU General Public License
-	along with this program; if not, write to the Free Software
-	Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
-*/
-
-
-/*
-	Not using activation hook because plugin requires admin settings before being used.
-*/
+// Not using activation hook because plugin requires admin settings before being used.
 /*
 function wpmsrc_activation() {
 }
@@ -48,8 +46,8 @@ add_action( 'init', 'wpmsrc_init' );
 
 
 /*
-	Uninstall
-*/
+ * Uninstall
+ */
 function wpmsrc_delete_options() {
 	// main site
 	delete_option( 'wpmsrc_options' );
@@ -68,8 +66,8 @@ register_uninstall_hook( __FILE__, 'wpmsrc_delete_options' );
 
 
 /*
-	Check WordPress version
-*/
+ * Check WordPress version
+ */
 function wpmsrc_version_check() {
 	global $wp_version;
 	$wpmsrc_plugin_info = get_plugin_data( __FILE__, false );
@@ -85,14 +83,9 @@ function wpmsrc_version_check() {
 }
 
 
-/*===========*/
-/*   Admin   */
-/*===========*/
-
-
 /*
-	Plugin list action links
-*/
+ * Plugin list action links
+ */
 function wpmsrc_action_links( $links, $file ) {
 	$this_plugin = plugin_basename(__FILE__);
 
@@ -106,8 +99,8 @@ add_filter( 'plugin_action_links', 'wpmsrc_action_links', 10, 2 );
 
 
 /*
-	Settings page
-*/
+ * Settings page
+ */
 function wpmsrc_add_settings_page() {
 	if ( is_multisite() )
 		add_options_page( 'Simple reCAPTCHA', 'Simple reCAPTCHA', 'manage_options', basename( __FILE__ ), 'wpmsrc_ms_settings_page' );
@@ -133,8 +126,8 @@ if ( is_admin() ) {
 
 
 /*
-	Load admin styles & scripts
-*/
+ * Load admin styles & scripts
+ */
 function wpmsrc_add_style( $hook ) {
 	if ( 'settings_page_simple-recaptcha' == $hook ) {
 		wp_enqueue_style( 'wpmsrc-admin-style', plugins_url( 'css/admin-style.css', __FILE__ ) );
@@ -144,15 +137,10 @@ function wpmsrc_add_style( $hook ) {
 add_action( 'admin_enqueue_scripts', 'wpmsrc_add_style' );
 
 
-/*==============*/
-/*   Settings   */
-/*==============*/
-
-
 /*
-	Register multisite settings
-	Double duty: Plugin activation and upgrade.
-*/
+ * Register multisite settings
+ * Double duty: Plugin activation and upgrade.
+ */
 function wpmsrc_register_ms_settings() {
 
 	// -1- DEFAULTS
@@ -210,9 +198,9 @@ function wpmsrc_register_ms_settings() {
 
 
 /*
-	Register single site settings
-	Double duty: Plugin activation and upgrade.
-*/
+ * Register single site settings
+ * Double duty: Plugin activation and upgrade.
+ */
 function wpmsrc_register_settings() {
 
 	// -1- DEFAULTS
@@ -250,8 +238,8 @@ function wpmsrc_register_settings() {
 
 
 /*
-	Multisite settings page
-*/
+ * Multisite settings page
+ */
 function wpmsrc_ms_settings_page() {
 
 	$ms_options = get_site_option( 'wpmsrc_options' );
@@ -512,11 +500,11 @@ function wpmsrc_settings_page() {
 }
 
 
-/*=====================*/
-/*   Display Captcha   */
-/*=====================*/
-
+/*
+ * Display Captcha
+ */
 function wpmsrc_display() {
+	$html = '';
 	require_once( 'lib/recaptchalib.php' );
 	
 	if ( is_multisite() )
@@ -525,52 +513,65 @@ function wpmsrc_display() {
 		$wpmsrc_options = get_option( 'wpmsrc_options' );
 		
 	if ( ! $wpmsrc_options['private_key'] || ! $wpmsrc_options['public_key'] ) {
-		// Keys missing. Show message to admin...
-		if ( current_user_can( 'manage_options' ) ) {
-			if ( ! is_admin() ) {  // ...except on admin page demo.
-				?>
-				<div>
-					<strong>
-						<?php _e( 'To use Google reCAPTCHA you must ', 'wpmsrc' ); ?> <a target="_blank" href="https://www.google.com/recaptcha/admin/create"><?php _e ( 'get your keys', 'wpmsrc' ); ?></a> <?php _e ( 'and enter them on the', 'wpmsrc' ); ?> <a target="_blank" href="<?php echo admin_url( '/options-general.php?page=simple-recaptcha.php' ); ?>"><?php _e ( 'plugin setting page', 'wpmsrc' ); ?></a>.
-					</strong>
-				</div>
-				<?php
-			}
+		// Keys missing. Show message to admin, except on admin page demo.
+		if ( current_user_can( 'manage_options' ) && ! is_admin() ) {
+			$html .= '<div>';
+			$html .= __( 'To use Google reCAPTCHA you must ', 'wpmsrc' )
+						. '<a target="_blank" href="https://www.google.com/recaptcha/admin/create">'
+						. __( 'get your keys', 'wpmsrc' ) . '</a><br>'
+						. __( ' and enter them on the ', 'wpmsrc' )
+						. '<a target="_blank" href="' . admin_url( '/options-general.php?page=simple-recaptcha.php' ) . '">'
+						. __( 'plugin setting page', 'wpmsrc' ) . '</a>.';
+			$html .= '</div>';
+			return $html;
 		}
-		return false;
+		else {
+			// error out
+			return false;	
+		}
 	}
-	?>
-	<script type='text/javascript'>
-		var RecaptchaOptions = { theme : "<?php echo $wpmsrc_options['theme']; ?>" };
-	</script>
-	<input type="hidden" name="wpmsrc-display" value="true">
-	<?php
-	return recaptcha_get_html( $wpmsrc_options['public_key'] );
+	$html .= '<script type="text/javascript">var RecaptchaOptions = { theme : "' . $wpmsrc_options['theme'] . '" }</script>';
+	$html .= '<input type="hidden" name="wpmsrc-display" value="true">';
+	$html .= recaptcha_get_html( $wpmsrc_options['public_key'] );
+	return $html;
 }
 
 
-/*===================*/
-/*   Check Captcha   */
-/*===================*/
-
+/*
+ * Check Captcha
+ */
+/*
+	sample POST :
+	Array (
+			[wpmtst_form_submitted] => 105e2c210b
+			[_wp_http_referer] => /form/
+			[client_name] => ted
+			[post_content] => rocks
+			[wpmsrc-display] => true
+			[recaptcha_challenge_field] => 03AHJ_VuvsJylbRy3KAm0Q8buA3hITtgnVvXWVpKHc4z-SIAKgnh0cvWhdgbM9wonk2Bh1oOONjIGDcvscXCF5r0_u_oTkRBYfsm_rd6XlDAk_Bw7m4cpZIqLMa4QQ749q6SgHjt18cx9KGPPJ6N2wYyCNvhymne47s7xRCPK4faoYhJZo1RA0tJSpN4XFx6KQK69ocit8YSewRlVxJ1BBWx6fecL5cnm7v_EJFL3j8GTst9IEaChXTh9d6njiIyA_0Jdt5jdJKMgw41N7QOiPI4nWlKRVhdg3MoVEJRMjxpoKZh_3rElTARI
+			[recaptcha_response_field] => 1138
+			[wpmtst_submit_testimonial] => Add Testimonial
+	)
+*/
 function wpmsrc_check() {
-	if ( isset( $_POST['wpmsrc-display'] ) ) {
-		require_once( 'lib/recaptchalib.php' );
+	if ( ! isset( $_POST['wpmsrc-display'] ) )
+		return false;
 		
-		if ( is_multisite() )
-			$wpmsrc_options = array_merge( get_site_option( 'wpmsrc_options' ), get_option( 'wpmsrc_options' ) );
-		else
-			$wpmsrc_options = get_option( 'wpmsrc_options' );
-		
-		if ( ! $wpmsrc_options['private_key'] || ! $wpmsrc_options['public_key'] )
-			return false;
-		
-		$resp = recaptcha_check_answer( 
-								$wpmsrc_options['private_key'],
-								$_SERVER['REMOTE_ADDR'],
-								$_POST['recaptcha_challenge_field'],
-								$_POST['recaptcha_response_field']
-						);
-		return $resp;
-	}
+	require_once( 'lib/recaptchalib.php' );
+	
+	if ( is_multisite() )
+		$wpmsrc_options = array_merge( get_site_option( 'wpmsrc_options' ), get_option( 'wpmsrc_options' ) );
+	else
+		$wpmsrc_options = get_option( 'wpmsrc_options' );
+	
+	if ( ! $wpmsrc_options['private_key'] || ! $wpmsrc_options['public_key'] )
+		return false;
+	
+	$resp = recaptcha_check_answer( 
+						$wpmsrc_options['private_key'],
+						$_SERVER['REMOTE_ADDR'],
+						$_POST['recaptcha_challenge_field'],
+						$_POST['recaptcha_response_field']
+					);
+	return $resp;
 }
