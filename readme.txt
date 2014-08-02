@@ -49,7 +49,7 @@ if ( function_exists( 'wpmsrc_check' ) ) {
 	// check for empty user response first (optional)
 	if ( empty( $_POST['recaptcha_response_field'] ) ) {
 	
-		$errors['captcha'] = _( 'Please complete the CAPTCHA.', 'yourtextdomain' );
+		$errors['captcha'] = __( 'Please complete the CAPTCHA.', 'yourtextdomain' );
 	
 	} else {
 	
