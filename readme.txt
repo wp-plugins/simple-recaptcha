@@ -8,25 +8,29 @@ Stable tag: trunk
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Use Google's reCAPTCHA on any custom form.
+Add Google's reCAPTCHA to any custom form.
 
 == Description ==
 
 = What this plugin does =
 
-Add reCAPTCHA to any custom form.
+Provide a function to add reCAPTCHA to any custom form.
 
 = What this plugin does NOT do =
 
 Add reCAPTCHA to standard WordPress forms like logins or comments. For that, try [Google Captcha](https://wordpress.org/plugins/google-captcha/) by BestWebSoft.
 
-= Purpose =
+= Features =
 
-1. To provide a single lightweight module for use by other plugins and themes.
-1. To store the reCAPTCHA keys in one place, whether single site or multisite, independent of any other plugin or theme.
-1. To encourage other plugin developers to decouple and modularize.
+* A single lightweight module for use by other plugins and themes.
+* Store the reCAPTCHA keys in one place, independent of any other plugin or theme.
+* Display and validate the reCAPTCHA with a few lines of code.
+* Four themes by Google (Red, White, BlackGlass, and Clean).
+* Multisite compatible.
 
-= How To Use =
+This plugin has room to grow and all ideas and feedback are welcome.
+
+= How to use =
 
 Step 1. Enter your reCAPTCHA keys in `Settings > Simple reCAPTCHA`.
 
@@ -66,29 +70,34 @@ if ( function_exists( 'wpmsrc_check' ) ) {
 ?>
 `
 
-= Features =
-
-* Display and validate the reCAPTCHA with a few lines of code.
-* Four themes by Google (Red, White, BlackGlass, and Clean).
-* Multisite compatible.
-
-= Development =
-
-This plugin is under active development and all ideas and feedback are welcome.
-
-The next major component will be internationalization (I18n) both in WordPress and in the reCAPTCHA itself.
-
-Other component candidates include client-side validation and custom theming.
-
 = Translations =
 
 Can you help? [Contact me](http://www.wpmission.com/contact/).
 
+
 == Installation ==
 
+Option A: 
+
+1. Go to `Plugins > Add New`.
+1. Search for "simple recaptcha".
+1. Click "Install Now".
+
+Option B: 
+
+1. Download the zip file.
+1. Unzip it on your hard drive.
 1. Upload the `simple-recaptcha` folder to the `/wp-content/plugins/` directory.
-2. Activate the plugin via the `Plugins` menu in WordPress.
-3. Go to `Settings > Simple reCAPTCHA`.
+
+Option C:
+
+1. Download the zip file.
+1. Upload the zip file via `Plugins > Add New > Upload`.
+
+Finally, activate the plugin.
+
+If you need help, use the [support forum](http://wordpress.org/support/plugin/wider-admin-menu) or [contact me](http://www.wpmission.com/contact/).
+
 
 == Frequently Asked Questions ==
 
@@ -98,7 +107,7 @@ Yes, be sure to Network Activate. Super admins can manage the authentication key
 
 = How do I get Google reCAPTCHA keys? =
 
-[Sign up and manage your keys here](https://www.google.com/recaptcha/admin). You can also find this link on the Settings page.
+[Sign up and manage your keys here](https://www.google.com/recaptcha/admin).
 
 = How to change the style? =
 
@@ -106,11 +115,12 @@ Go to the Settings page and select a theme. Don't forget to `Save Changes`.
 
 To customize it, select the Clean theme and style up from there.
 
-= How to use other language files with reCAPTCHA? = 
-
-I am working on this.
 
 == Changelog ==
+
+= 0.5 =
+* Add `uninstall.php`, a best practice.
+* Leave No Trace.
 
 = 0.4 =
 * Fix bug in display function.
@@ -125,6 +135,9 @@ I am working on this.
 * Initial release.
 
 == Upgrade Notice ==
+
+= 0.5 =
+Improved uninstall process.
 
 = 0.4 =
 Fixed a bug in the display function.
