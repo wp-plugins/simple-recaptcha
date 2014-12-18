@@ -118,7 +118,6 @@ function wpmsrc_admin_init() {
 add_action( 'admin_init', 'wpmsrc_admin_init' );
 
 
-
 /*
  * Register multisite settings
  * Double duty: Plugin activation and update.
