@@ -4,7 +4,7 @@
  * Plugin URI: http://www.wpmission.com/wordpress-plugins/simple-recaptcha
  * Description: Add Google's reCAPTCHA to any custom form.
  * Author: Chris Dillon
- * Version: 0.5
+ * Version: 0.6
  * Author URI: http://www.wpmission.com/
  * Text Domain: simple-recaptcha
  * Requires: 3.0 or higher

@@ -1,0 +1,125 @@
+# Copyright (C) 2015 Simple reCAPTCHA
+# This file is distributed under the same license as the Simple reCAPTCHA package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Simple reCAPTCHA 0.5\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/simple-recaptcha\n"
+"POT-Creation-Date: 2015-03-30 11:21:35+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: simple-recaptcha.php:66
+msgid ""
+"<strong>%s</strong> requires WordPress <strong>%s</strong> or higher so it "
+"has been deactivated. Please upgrade WordPress and try again."
+msgstr ""
+
+#: simple-recaptcha.php:69
+msgid "Back to the WordPress <a href=\"%s\">Plugins page</a>."
+msgstr ""
+
+#: simple-recaptcha.php:81
+msgid "Settings"
+msgstr ""
+
+#: simple-recaptcha.php:274
+msgid "Settings saved."
+msgstr ""
+
+#: simple-recaptcha.php:290
+msgid "Simple reCAPTCHA Settings"
+msgstr ""
+
+#: simple-recaptcha.php:296
+msgid "Authentication"
+msgstr ""
+
+#: simple-recaptcha.php:301
+msgid "To use reCAPTCHA:"
+msgstr ""
+
+#: simple-recaptcha.php:304
+msgid "Register with Google"
+msgstr ""
+
+#: simple-recaptcha.php:305
+msgid "Get your keys."
+msgstr ""
+
+#: simple-recaptcha.php:306
+msgid "Enter your keys here."
+msgstr ""
+
+#: simple-recaptcha.php:309
+msgid "Note: The CAPTCHA will not appear without valid keys."
+msgstr ""
+
+#: simple-recaptcha.php:337
+msgid "Keys are managed by your site administrator."
+msgstr ""
+
+#: simple-recaptcha.php:339
+msgid "Manage keys on your main site."
+msgstr ""
+
+#: simple-recaptcha.php:348
+msgid "Options"
+msgstr ""
+
+#: simple-recaptcha.php:355
+msgid "Network default theme"
+msgstr ""
+
+#: simple-recaptcha.php:374
+msgid "Main site theme"
+msgstr ""
+
+#: simple-recaptcha.php:376
+msgid "Theme for this site"
+msgstr ""
+
+#: simple-recaptcha.php:379
+msgid "Theme"
+msgstr ""
+
+#: simple-recaptcha.php:408
+msgid "Leave No Trace"
+msgstr ""
+
+#: simple-recaptcha.php:410
+msgid "Deleting this plugin will also delete these settings."
+msgstr ""
+
+#: simple-recaptcha.php:411
+msgid "Deactivating it will <strong>not</strong> delete these settings."
+msgstr ""
+
+#: simple-recaptcha.php:464
+msgid ""
+"To use Google reCAPTCHA you must <a target=\"_blank\" href=\"%s\">get your "
+"keys</a> and enter them on the <a href=\"%s\">plugin setting page</a>."
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Simple reCAPTCHA"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://www.wpmission.com/wordpress-plugins/simple-recaptcha"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Add Google's reCAPTCHA to any custom form."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Chris Dillon"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://www.wpmission.com/"
+msgstr ""

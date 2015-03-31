@@ -1,0 +1,132 @@
+# Copyright (C) 2015 Simple reCAPTCHA
+# This file is distributed under the same license as the Simple reCAPTCHA package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Simple reCAPTCHA 0.5\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/simple-recaptcha\n"
+"POT-Creation-Date: 2015-03-30 11:21:35+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-03-31 10:01+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"X-Generator: Poedit 1.7.4\n"
+"Language: sr_RS\n"
+
+#: simple-recaptcha.php:66
+msgid ""
+"<strong>%s</strong> requires WordPress <strong>%s</strong> or higher so it has "
+"been deactivated. Please upgrade WordPress and try again."
+msgstr ""
+"strong>%s</strong> zahteva WordPress <strong>%s</strong> ili noviju verziju, "
+"tako da će biti deaktiviran. Nadogradite WordPress i pokušajte ponovo."
+
+#: simple-recaptcha.php:69
+msgid "Back to the WordPress <a href=\"%s\">Plugins page</a>."
+msgstr "Nazad na WordPress <a href=\"%s\">Stranicu plugin-a</a>."
+
+#: simple-recaptcha.php:81
+msgid "Settings"
+msgstr "Podešavanja"
+
+#: simple-recaptcha.php:274
+msgid "Settings saved."
+msgstr "Podešavanja sačuvana"
+
+#: simple-recaptcha.php:290
+msgid "Simple reCAPTCHA Settings"
+msgstr "Simple reCAPTCHA podešavanja"
+
+#: simple-recaptcha.php:296
+msgid "Authentication"
+msgstr "Autorizacija"
+
+#: simple-recaptcha.php:301
+msgid "To use reCAPTCHA:"
+msgstr "Da biste koristili reCAPTCHA:"
+
+#: simple-recaptcha.php:304
+msgid "Register with Google"
+msgstr "Registrujte se preko Google-a"
+
+#: simple-recaptcha.php:305
+msgid "Get your keys."
+msgstr "Uzmite svoje ključeve"
+
+#: simple-recaptcha.php:306
+msgid "Enter your keys here."
+msgstr "Ovde unesite svoje ključeve."
+
+#: simple-recaptcha.php:309
+msgid "Note: The CAPTCHA will not appear without valid keys."
+msgstr "Napomena: CAPTCHA se neće pojaviti bez odgovarajućih ključeva."
+
+#: simple-recaptcha.php:337
+msgid "Keys are managed by your site administrator."
+msgstr "Ključeve održava administrator vašeg site-a."
+
+#: simple-recaptcha.php:339
+msgid "Manage keys on your main site."
+msgstr "Upravljajte ključevima na svom glavnom site-u"
+
+#: simple-recaptcha.php:348
+msgid "Options"
+msgstr "Opcije"
+
+#: simple-recaptcha.php:355
+msgid "Network default theme"
+msgstr "Podrazumevana tema mreže"
+
+#: simple-recaptcha.php:374
+msgid "Main site theme"
+msgstr "Tema glavnog site-a"
+
+#: simple-recaptcha.php:376
+msgid "Theme for this site"
+msgstr "Tema za ovaj site"
+
+#: simple-recaptcha.php:379
+msgid "Theme"
+msgstr "Tema"
+
+#: simple-recaptcha.php:408
+msgid "Leave No Trace"
+msgstr "Ne ostavljajte tragove"
+
+#: simple-recaptcha.php:410
+msgid "Deleting this plugin will also delete these settings."
+msgstr "Brisanjem ovog plugin-a, obrisaćete i sledeća podešavanja."
+
+#: simple-recaptcha.php:411
+msgid "Deactivating it will <strong>not</strong> delete these settings."
+msgstr "Deaktiviranjem <strong>nećete</strong> obrisati ova podešavanja. "
+
+#: simple-recaptcha.php:464
+msgid ""
+"To use Google reCAPTCHA you must <a target=\"_blank\" href=\"%s\">get your "
+"keys</a> and enter them on the <a href=\"%s\">plugin setting page</a>."
+msgstr ""
+"Da biste koristili Google reCAPTCHA, morate <a target=\"_blank\" href=\"%s"
+"\">dobiti svoje ključeve</a> i uneti ih na <a href=\"%s\">stranicu za "
+"podešavanje plugin-a</a>."
+
+#. Plugin Name of the plugin/theme
+msgid "Simple reCAPTCHA"
+msgstr "Simple reCAPTCHA"
+
+#. Plugin URI of the plugin/theme
+msgid "http://www.wpmission.com/wordpress-plugins/simple-recaptcha"
+msgstr "http://www.wpmission.com/wordpress-plugins/simple-recaptcha"
+
+#. Description of the plugin/theme
+msgid "Add Google's reCAPTCHA to any custom form."
+msgstr "Dodajte  Google reCAPTCHA bilo kom prilagođenom obrascu."
+
+#. Author of the plugin/theme
+msgid "Chris Dillon"
+msgstr "Chris Dillon"
+
+#. Author URI of the plugin/theme
+msgid "http://www.wpmission.com/"
+msgstr "http://www.wpmission.com/"

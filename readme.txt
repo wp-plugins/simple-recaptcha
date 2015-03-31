@@ -72,6 +72,10 @@ if ( function_exists( 'wpmsrc_check' ) ) {
 
 = Translations =
 
+Since version 0.6:
+
+* Serbo-Croatian (sr_RS) thanks to Andrijana Nikolic at [Web Hosting Geeks](http://webhostinggeeks.com/).
+
 Can you help? [Contact me](http://www.wpmission.com/contact/).
 
 
@@ -118,6 +122,9 @@ To customize it, select the Clean theme and style up from there.
 
 == Changelog ==
 
+= 0.6 =
+* Add Serbo-Croatian translation thanks to Andrijana Nikolic at [Web Hosting Geeks](http://webhostinggeeks.com/).
+
 = 0.5 =
 * Add `uninstall.php`, a best practice.
 * Leave No Trace.
@@ -126,24 +133,27 @@ To customize it, select the Clean theme and style up from there.
 * Fix bug in display function.
 
 = 0.3 =
-* Improved compatibility with earlier versions of PHP.
+* Improve compatibility with earlier versions of PHP.
 
 = 0.2 =
-* Fixed multisite compatibility.
+* Fix multisite compatibility.
 
 = 0.1 =
 * Initial release.
 
 == Upgrade Notice ==
 
+= 0.6 =
+Add Serbo-Croatian translation.
+
 = 0.5 =
-Improved uninstall process.
+Improve uninstall process.
 
 = 0.4 =
-Fixed a bug in the display function.
+Fix a bug in the display function.
 
 = 0.3 =
-Improved compatibility with earlier versions of PHP.
+Improve compatibility with earlier versions of PHP.
 
 = 0.2 =
 Definitely upgrade for multisite installations.
